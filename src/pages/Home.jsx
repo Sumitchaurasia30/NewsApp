@@ -2,6 +2,10 @@ import React, { use, useEffect, useState } from 'react'
 import NewsItem from '../Components/NewsItem'
 import { useSearchParams } from 'react-router-dom'
 import InfiniteScroll from 'react-infinite-scroll-component';
+fetch('/api/news')
+  .then(res => res.json())
+  .then(data => console.log(data));
+
 
 export default function Home() {
   let [searchParams] = useSearchParams()
